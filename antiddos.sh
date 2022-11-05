@@ -1,8 +1,3 @@
-#! /bin/bash
-
-file='/var/log/apache2/access.log'
-tmplogfile='/root/tmp.txt'
-
 # Lay IP tu Apache access log
 tail -fn 1000 $file | head -n 1000 | cut -d " " -f 1 > $tmplogfile
 
